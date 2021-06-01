@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LandingPageComponent } from './views/landing-page/landing-page.component';
+import { ImagesPageComponent } from './views/images-page/images-page.component';
+import { NewsPageComponent } from './views/news-page/news-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingPageComponent,
+    ImagesPageComponent,
+    NewsPageComponent
   ],
   imports: [
     BrowserModule,
