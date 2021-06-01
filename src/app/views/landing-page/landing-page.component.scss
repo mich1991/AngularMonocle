@@ -1,0 +1,50 @@
+@import '../../../variables';
+
+nav{
+    width: 100vw;
+    padding-top: 0.7rem;
+    ul{
+        display: flex;
+        justify-content: end;
+        list-style: none;
+        & li {
+            margin-right: 2.5rem
+        }
+    }
+}
+.container{
+    @include container;
+    flex-direction: column;
+    transform: translateY(-10%);
+}
+.logo {
+    width: 17rem;
+    height: 17rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    & i{
+        width: 20px;
+        height: 20px;
+        opacity: .7;
+        position: absolute;
+        transform: translate(15px,10px);
+        z-index: 1
+    }
+    & input {
+       @include formInput;
+       &:hover{
+          @include hoverEffect;
+       }
+    }
+    & button{
+        @include submitButton;
+    }
+    & div {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
