@@ -1,0 +1,68 @@
+@import '../../../variables';
+
+nav{
+    width: 100vw;
+    height: 3rem;
+    padding-top: 0.7rem;
+    ul{
+        height: 3rem;
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        & li {
+            margin-right: 2.5rem;
+            line-height: 2rem;
+            & a{
+                text-decoration: none;
+                color: #000;
+            }
+            & button{
+                width: 4rem;
+                height: 2rem;
+                background-color: $accent;
+                border-radius: 5px;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                z-index: 1
+            }
+        }
+    }
+}
+.container{
+    @include container;
+    flex-direction: column;
+    justify-content:flex-start;
+    min-height: calc(100vh - 3rem);
+}
+.logo {
+    width: 17rem;
+    height: 17rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    & i{
+        width: 20px;
+        height: 20px;
+        opacity: .7;
+        position: absolute;
+        transform: translate(15px,10px);
+        z-index: 1
+    }
+    & input {
+       @include formInput;
+       &:hover{
+          @include hoverEffect;
+       }
+    }
+    & button{
+        @include submitButton;
+    }
+    & div {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
