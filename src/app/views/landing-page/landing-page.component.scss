@@ -2,20 +2,38 @@
 
 nav{
     width: 100vw;
+    height: 3rem;
     padding-top: 0.7rem;
     ul{
+        height: 3rem;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         list-style: none;
         & li {
-            margin-right: 2.5rem
+            margin-right: 2.5rem;
+            line-height: 2rem;
+            & a{
+                text-decoration: none;
+                color: #000;
+            }
+            & button{
+                width: 4rem;
+                height: 2rem;
+                background-color: $accent;
+                border-radius: 5px;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                z-index: 1
+            }
         }
     }
 }
 .container{
     @include container;
     flex-direction: column;
-    transform: translateY(-10%);
+    justify-content:flex-start;
+    min-height: calc(100vh - 3rem);
 }
 .logo {
     width: 17rem;
