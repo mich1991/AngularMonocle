@@ -7,6 +7,7 @@ import { LandingPageComponent } from './views/landing-page/landing-page.componen
 import { ImagesPageComponent } from './views/images-page/images-page.component';
 import { NewsPageComponent } from './views/news-page/news-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ImagesResultPageComponent } from './views/images-result-page/images-result-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     LandingPageComponent,
     ImagesPageComponent,
     NewsPageComponent,
-    NavigationComponent
+    NavigationComponent,
+    ImagesResultPageComponent
   ],
   imports: [
     BrowserModule,

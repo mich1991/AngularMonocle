@@ -1,0 +1,44 @@
+@import '../../../variables';
+
+
+.container{
+    @include container;
+    flex-direction: column;
+    justify-content:flex-start;
+    min-height: calc(100vh - 3rem);
+}
+.logo {
+    width: 17rem;
+    height: 17rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    & .insider{
+        opacity: .4;
+        position: absolute;
+        transform: translate(15px,10px);
+        z-index: 1
+    }
+    & input {
+       @include formInput;
+       &:hover{
+          @include hoverEffect;
+       }
+    }
+    & button {
+        width: 2.2rem;
+        height: 2.2rem;
+        cursor: pointer;
+        color: $secondary;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+        transform: translateX(-2.5rem);
+        & i {
+            color: $secondary;
+        }
+    }
+
+}
