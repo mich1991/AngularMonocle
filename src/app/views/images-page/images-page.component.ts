@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-images-page',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./images-page.component.scss']
 })
 export class ImagesPageComponent implements OnInit {
-
-  constructor() { }
+  searchValue : string = ''
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm) : void{
+    this.searchValue = form.value.search
+    this.route.navigate(['images', this.searchValue])
   }
 
 }

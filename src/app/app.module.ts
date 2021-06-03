@@ -8,6 +8,7 @@ import { ImagesPageComponent } from './views/images-page/images-page.component';
 import { NewsPageComponent } from './views/news-page/news-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ImagesResultPageComponent } from './views/images-result-page/images-result-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImagesResultPageComponent } from './views/images-result-page/images-res
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-images-result-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImagesResultPageComponent implements OnInit {
 
-  constructor() { }
+  query: string = ''
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.query = this.route.snapshot.paramMap.get('query')!;
+    console.log(this.query)
   }
 
 }
