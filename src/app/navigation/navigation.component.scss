@@ -12,12 +12,13 @@ nav{
         & li {
             margin-right: 2.5rem;
             line-height: 2rem;
-            &:hover{
-                text-decoration: 1px underline black;
-            }
+            
             & a{
                 text-decoration: none;
                 color: #000;
+                &:hover{
+                    text-decoration: 1px underline black;
+                }
                 
             }
             & button{
@@ -31,5 +32,23 @@ nav{
                 z-index: 1
             }
         }
+    }
+}
+.active {
+    color: $primary !important;
+    &:hover{
+        text-decoration: none !important;
+        cursor: default;
+    }
+    
+}
+img{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    &:hover{
+        border-radius: 50%;
+        background-color: $accent2;
+        @include hoverEffect;
     }
 }
