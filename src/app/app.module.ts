@@ -9,6 +9,7 @@ import { NewsPageComponent } from './views/news-page/news-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ImagesResultPageComponent } from './views/images-result-page/images-result-page.component';
 import { FormsModule } from '@angular/forms';
+import { SingleImageCardComponent } from './single-image-card/single-image-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     ImagesPageComponent,
     NewsPageComponent,
     NavigationComponent,
-    ImagesResultPageComponent
+    ImagesResultPageComponent,
+    SingleImageCardComponent
   ],
   imports: [
     BrowserModule,
