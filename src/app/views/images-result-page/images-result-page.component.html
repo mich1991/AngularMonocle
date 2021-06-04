@@ -1,1 +1,15 @@
-<p>images-result-page works! nice</p>
+<div class="form__container">
+    <img src="./../../../assets/logo.svg" alt="" class="logo">
+    <form 
+    (ngSubmit)="onSubmit(form)" 
+    #form="ngForm">
+        <div>    
+            <i class="fas fa-search insider"></i>
+            <input type="text" name="search" [(ngModel)] = "query">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<main class="container">
+
+</main>

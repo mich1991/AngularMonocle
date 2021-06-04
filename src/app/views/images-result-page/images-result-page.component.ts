@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterLinkActive } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-images-result-page',
@@ -8,12 +9,18 @@ import { ActivatedRoute, Router, RouterLinkActive } from '@angular/router';
 })
 export class ImagesResultPageComponent implements OnInit {
 
-  query: string = ''
-  constructor(private route: ActivatedRoute) { }
+  query!: string;
+  input!: HTMLInputElement;
+
+  constructor(private route: ActivatedRoute, private navigation : Router) { }
 
   ngOnInit(): void {
     this.query = this.route.snapshot.paramMap.get('query')!;
-    console.log(this.query)
+  }
+
+  onSubmit(form: NgForm) : void{
+    this.query = form.value.search
+    this.navigation.navigate(['images', this.query])
   }
 
 }
