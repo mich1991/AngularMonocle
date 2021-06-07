@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { APIKEY } from '../apikeys'
 import { catchError, map, retry, tap } from 'rxjs/operators'
 import { Image } from '../models/Image'
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { DataOutputService } from './data-output.service';
 
 @Injectable({
@@ -15,20 +15,20 @@ export class GoogleApiService {
   constructor(private http: HttpClient, private database : DataOutputService) {
   }
   
-  getImagesSearch(query : string): void{
+  getImagesSearch(query : string) : Observable<Image[]>{
     let request = this.http.get(`${this.url}images/q=${query}`, {
       headers: {
         'x-rapidapi-key': APIKEY,
         'x-rapidapi-host': 'google-search3.p.rapidapi.com'
       },
       observe: 'body'
-    })
-    request.pipe(
+    }).pipe(
       retry(3),
       catchError(this.handleError),
       map((res: any) => res.image_results),
       tap(console.log)
-      ).subscribe((data: Image[]) => this.database.images = data )
+      )
+      return request
   }
 
   handleError(error:HttpErrorResponse) {

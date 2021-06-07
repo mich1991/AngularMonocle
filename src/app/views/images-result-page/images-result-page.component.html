@@ -11,34 +11,10 @@
     </form>
 </div>
 <main>
-    <div class="container">
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
-        <app-single-image-card></app-single-image-card>
+    <div class="container" >
+        <ng-container *ngFor="let item of images | async">
+            <app-single-image-card [item]="item"></app-single-image-card>
+        </ng-container>
     </div>
 <!-- <aside>details</aside> -->
 </main>
