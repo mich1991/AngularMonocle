@@ -1,9 +1,9 @@
 
 <div class="container">
     <img src="./../../../assets/logo.svg" alt="" class="logo">
-    <form method="get">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" >
         <i class="fas fa-search"></i>
-        <input type="text" name="search" id="">
+        <input type="text" name="search" id="" ngModel>
         <div>
             <button>Monocle Search</button>
             <button>I'm Feeling Lucky</button>
