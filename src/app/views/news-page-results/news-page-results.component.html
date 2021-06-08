@@ -1,5 +1,4 @@
 <div class="form__container">
-    
     <img src="./../../../assets/logo.svg" alt="" class="logo">
     <form 
     (ngSubmit)="onSubmit(form)" 
@@ -13,8 +12,8 @@
 </div>
 <main>
     <div class="container" >
-        <ng-container *ngFor="let item of images | async">
-            <app-single-image-card [item]="item"></app-single-image-card>
+        <ng-container *ngFor="let item of newsList | async">
+            <app-single-news-card></app-single-news-card>
         </ng-container>
     </div>
 <!-- <aside>details</aside> -->

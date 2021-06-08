@@ -11,6 +11,12 @@
     width: 17rem;
     height: 17rem;
 }
+span{
+    transform: translateY(6.5rem);
+    z-index: 1;
+    color: #fff;
+    font-size: 1.2rem;
+}
 form{
     display: flex;
     flex-direction: column;

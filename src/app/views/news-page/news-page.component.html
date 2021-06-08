@@ -1,1 +1,12 @@
-<p>news-page works!</p>
+
+<div class="container">
+    <span>News</span>
+    <img src="./../../../assets/logo.svg" alt="" class="logo">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div>    
+            <i class="fas fa-search insider"></i>
+            <input type="text" name="search" ngModel>
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>

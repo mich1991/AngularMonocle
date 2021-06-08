@@ -10,6 +10,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ImagesResultPageComponent } from './views/images-result-page/images-result-page.component';
 import { FormsModule } from '@angular/forms';
 import { SingleImageCardComponent } from './single-image-card/single-image-card.component';
+import { NewsPageResultsComponent } from './views/news-page-results/news-page-results.component';
+import { SingleNewsCardComponent } from './single-news-card/single-news-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SingleImageCardComponent } from './single-image-card/single-image-card.
     NewsPageComponent,
     NavigationComponent,
     ImagesResultPageComponent,
-    SingleImageCardComponent
+    SingleImageCardComponent,
+    NewsPageResultsComponent,
+    SingleNewsCardComponent
   ],
   imports: [
     BrowserModule,
