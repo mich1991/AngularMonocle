@@ -1,0 +1,26 @@
+@import '../../variables';
+:host{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+h2, p {
+    font-family: $secondaryFont;
+}
+
+div{
+    width: 60vw;
+    margin: 0.7rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid $accent2;
+    font-family: $secondaryFont;
+}
+
+div:hover h2{
+    color: $accent;
+}

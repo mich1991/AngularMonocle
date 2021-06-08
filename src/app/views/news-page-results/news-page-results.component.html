@@ -13,7 +13,7 @@
 <main>
     <div class="container" >
         <ng-container *ngFor="let item of newsList | async">
-            <app-single-news-card></app-single-news-card>
+        <app-single-news-card [news]="item"></app-single-news-card>
         </ng-container>
     </div>
 <!-- <aside>details</aside> -->

@@ -5,6 +5,7 @@ import { catchError, map, retry, tap } from 'rxjs/operators'
 import { Image } from '../models/Image'
 import { Observable, throwError } from 'rxjs';
 import { DataOutputService } from './data-output.service';
+import { News } from '../models/News';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,29 @@ export class GoogleApiService {
       catchError(this.handleError),
       map((res: any) => res.image_results),
       tap(console.log)
+      )
+      return request
+  }
+
+  getNewsSearch(query : string) : Observable<News[]>{
+    let request:Observable<News[]> = this.http.get(`${this.url}news/q=${query}`, {
+      headers: {
+        'x-rapidapi-key': APIKEY,
+        'x-rapidapi-host': 'google-search3.p.rapidapi.com'
+      },
+      observe: 'body'
+    }).pipe(
+      retry(3),
+      catchError(this.handleError),
+      // tap(console.log),
+      map((res: any) => res.entries.map((data:any) => ({
+        title: data.title,
+        link: data.link,
+        published: data.published,
+        source: data.source.title
+      })
+      )),
+      tap(console.log),
       )
       return request
   }

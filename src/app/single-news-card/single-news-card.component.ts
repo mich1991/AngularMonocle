@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { News } from '../models/News';
 
 @Component({
   selector: 'app-single-news-card',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-news-card.component.scss']
 })
 export class SingleNewsCardComponent implements OnInit {
-
+  @Input() news!: News 
   constructor() { }
 
   ngOnInit(): void {
